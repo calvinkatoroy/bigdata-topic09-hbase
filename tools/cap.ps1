@@ -7,9 +7,9 @@ public class W{[DllImport("user32.dll")]public static extern bool GetWindowRect(
 [DllImport("user32.dll")]public static extern bool SetWindowPos(IntPtr h,IntPtr a,int x,int y,int cx,int cy,uint f);
 public struct RECT{public int L,T,R,B;}}
 "@
-$D='C:\Users\calvi\Documents\BIG_DATA\6\Topic09_HBase'
+$D=(Resolve-Path "$PSScriptRoot\..").Path; $W=(wsl -d Ubuntu-24.04 wslpath -a ($D -replace '\\','/')).Trim()
 $done="$D\$Name.done"; Remove-Item $done -ErrorAction SilentlyContinue
-$inner="$Bash; touch /mnt/c/Users/calvi/Documents/BIG_DATA/6/Topic09_HBase/$Name.done; sleep 600"
+$inner="$Bash; touch $W/$Name.done; sleep 600"
 $p=Start-Process conhost.exe -ArgumentList "cmd /c mode con cols=$Cols lines=$Lines & title $Name & wsl -d Ubuntu-24.04 -u root -- bash -c `"$inner`"" -PassThru
 $t=0; while(-not (Test-Path $done) -and $t -lt $TimeoutSec){Start-Sleep 2;$t+=2}
 Start-Sleep 2
@@ -20,6 +20,6 @@ if($h -eq 0){throw "no window"}
 $r=New-Object W+RECT; [W]::GetWindowRect($h,[ref]$r)|Out-Null
 $bmp=New-Object Drawing.Bitmap ($r.R-$r.L),($r.B-$r.T)
 $g=[Drawing.Graphics]::FromImage($bmp); $g.CopyFromScreen($r.L,$r.T,0,0,$bmp.Size)
-$bmp.Save("$D\shots\$Name.png"); $g.Dispose(); $bmp.Dispose()
+$bmp.Save("$D\report\shots\$Name.png"); $g.Dispose(); $bmp.Dispose()
 Get-Process | ?{$_.MainWindowTitle -like "*$Name*"} | Stop-Process -Force -ErrorAction SilentlyContinue; Stop-Process -Id $p.Id -Force -ErrorAction SilentlyContinue
 "saved $Name $($r.R-$r.L)x$($r.B-$r.T)"
