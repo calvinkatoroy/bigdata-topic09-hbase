@@ -1,0 +1,6 @@
+*.done
+load.out
+dense.txt
+term.py
+s6.rb
+__pycache__/

@@ -1,0 +1,23 @@
+hbase:001:0> create 'hotspot', 'loc', 'sensor'
+Created table hotspot
+Took 1.0748 seconds
+=> Hbase::Table - hotspot
+hbase:002:0> list
+TABLE
+hotspot
+1 row(s)
+Took 0.0539 seconds
+=> ["hotspot"]
+hbase:003:0> describe 'hotspot'
+Table hotspot is ENABLED
+hotspot, {TABLE_ATTRIBUTES => {METADATA => {'hbase.store.file-tracker.impl' => 'DEFAULT'}}}
+COLUMN FAMILIES DESCRIPTION
+{NAME => 'loc', INDEX_BLOCK_ENCODING => 'NONE', VERSIONS => '1', KEEP_DELETED_CELLS => 'FALSE', DATA_BLOCK_ENCODING => 'NONE', TTL => 'FOREVER', MIN_VERSIONS => '0', REPLICATION_SCOPE => '0', BLOOMFILTER => 'ROW', IN_MEMORY => 'false', COMPRESSION => 'NONE', BLOCKCACHE => 'true', BLOCKSIZE => '65536 B (64KB)'}
+
+{NAME => 'sensor', INDEX_BLOCK_ENCODING => 'NONE', VERSIONS => '1', KEEP_DELETED_CELLS => 'FALSE', DATA_BLOCK_ENCODING => 'NONE', TTL => 'FOREVER', MIN_VERSIONS => '0', REPLICATION_SCOPE => '0', BLOOMFILTER => 'ROW', IN_MEMORY => 'false', COMPRESSION => 'NONE', BLOCKCACHE => 'true', BLOCKSIZE => '65536 B (64KB)'}
+
+2 row(s)
+Quota is disabled
+Took 0.1310 seconds
+hbase:004:0> 
+hbase:001:0> 

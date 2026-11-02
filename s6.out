@@ -1,0 +1,6 @@
+hbase:001:0> t=Time.now
+=> 2026-11-01 18:41:52 +0700
+hbase:002:0> load '/mnt/c/Users/calvi/Documents/BIG_DATA/6/Topic09_HBase/load10k.rb'
+ERROR NoMethodError: undefined method `put' for main:Object
+Did you mean?  puts
+               putc

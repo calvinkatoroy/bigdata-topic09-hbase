@@ -1,0 +1,34 @@
+hbase:001:0> get 'hotspot', 'g086111#79739078#0631#23462'
+COLUMN  CELL
+ loc:lat timestamp=2026-11-01T18:41:28.036, value=-3.47306
+ loc:lon timestamp=2026-11-01T18:41:28.058, value=111.92799
+ sensor:conf timestamp=2026-11-01T18:41:28.102, value=nominal
+ sensor:frp timestamp=2026-11-01T18:41:28.077, value=5.28
+1 row(s)
+Took 0.5610 seconds
+hbase:002:0> scan 'hotspot', {LIMIT => 5}
+ROW  COLUMN+CELL
+ g085122#79739076#0553#36563 column=loc:lat, timestamp=2026-11-01T18:41:28.122, value=-4.39419
+ g085122#79739076#0553#36563 column=loc:lon, timestamp=2026-11-01T18:41:28.141, value=122.66214
+ g085122#79739076#0553#36563 column=sensor:conf, timestamp=2026-11-01T18:41:28.177, value=nominal
+ g085122#79739076#0553#36563 column=sensor:frp, timestamp=2026-11-01T18:41:28.161, value=5.83
+ g086111#79739078#0631#23462 column=loc:lat, timestamp=2026-11-01T18:41:28.036, value=-3.47306
+ g086111#79739078#0631#23462 column=loc:lon, timestamp=2026-11-01T18:41:28.058, value=111.92799
+ g086111#79739078#0631#23462 column=sensor:conf, timestamp=2026-11-01T18:41:28.102, value=nominal
+ g086111#79739078#0631#23462 column=sensor:frp, timestamp=2026-11-01T18:41:28.077, value=5.28
+ g087111#79739080#0527#02562 column=loc:lat, timestamp=2026-11-01T18:41:28.263, value=-2.50477
+ g087111#79739080#0527#02562 column=loc:lon, timestamp=2026-11-01T18:41:28.280, value=111.5566
+ g087111#79739080#0527#02562 column=sensor:conf, timestamp=2026-11-01T18:41:28.304, value=high
+ g087111#79739080#0527#02562 column=sensor:frp, timestamp=2026-11-01T18:41:28.290, value=63.86
+ g087113#79739075#1815#46688 column=loc:lat, timestamp=2026-11-01T18:41:28.352, value=-2.13067
+ g087113#79739075#1815#46688 column=loc:lon, timestamp=2026-11-01T18:41:28.372, value=113.78811
+ g087113#79739075#1815#46688 column=sensor:conf, timestamp=2026-11-01T18:41:28.400, value=nominal
+ g087113#79739075#1815#46688 column=sensor:frp, timestamp=2026-11-01T18:41:28.387, value=4.37
+ g087114#79739079#1749#18605 column=loc:lat, timestamp=2026-11-01T18:41:28.192, value=-2.70884
+ g087114#79739079#1749#18605 column=loc:lon, timestamp=2026-11-01T18:41:28.208, value=114.07139
+ g087114#79739079#1749#18605 column=sensor:conf, timestamp=2026-11-01T18:41:28.249, value=nominal
+ g087114#79739079#1749#18605 column=sensor:frp, timestamp=2026-11-01T18:41:28.237, value=2.23
+5 row(s)
+Took 0.0860 seconds
+hbase:003:0> 
+hbase:001:0> 

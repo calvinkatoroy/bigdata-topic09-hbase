@@ -1,0 +1,42 @@
+hbase:001:0> put 'hotspot', 'g086111#79739078#0631#23462', 'loc:lat', '-3.47306'
+Took 0.4555 seconds
+hbase:002:0> put 'hotspot', 'g086111#79739078#0631#23462', 'loc:lon', '111.92799'
+Took 0.0055 seconds
+hbase:003:0> put 'hotspot', 'g086111#79739078#0631#23462', 'sensor:frp', '5.28'
+Took 0.0065 seconds
+hbase:004:0> put 'hotspot', 'g086111#79739078#0631#23462', 'sensor:conf', 'nominal'
+Took 0.0050 seconds
+hbase:005:0> put 'hotspot', 'g085122#79739076#0553#36563', 'loc:lat', '-4.39419'
+Took 0.0062 seconds
+hbase:006:0> put 'hotspot', 'g085122#79739076#0553#36563', 'loc:lon', '122.66214'
+Took 0.0066 seconds
+hbase:007:0> put 'hotspot', 'g085122#79739076#0553#36563', 'sensor:frp', '5.83'
+Took 0.0064 seconds
+hbase:008:0> put 'hotspot', 'g085122#79739076#0553#36563', 'sensor:conf', 'nominal'
+Took 0.0063 seconds
+hbase:009:0> put 'hotspot', 'g087114#79739079#1749#18605', 'loc:lat', '-2.70884'
+Took 0.0066 seconds
+hbase:010:0> put 'hotspot', 'g087114#79739079#1749#18605', 'loc:lon', '114.07139'
+Took 0.0060 seconds
+hbase:011:0> put 'hotspot', 'g087114#79739079#1749#18605', 'sensor:frp', '2.23'
+Took 0.0042 seconds
+hbase:012:0> put 'hotspot', 'g087114#79739079#1749#18605', 'sensor:conf', 'nominal'
+Took 0.0051 seconds
+hbase:013:0> put 'hotspot', 'g087111#79739080#0527#02562', 'loc:lat', '-2.50477'
+Took 0.0068 seconds
+hbase:014:0> put 'hotspot', 'g087111#79739080#0527#02562', 'loc:lon', '111.5566'
+Took 0.0045 seconds
+hbase:015:0> put 'hotspot', 'g087111#79739080#0527#02562', 'sensor:frp', '63.86'
+Took 0.0039 seconds
+hbase:016:0> put 'hotspot', 'g087111#79739080#0527#02562', 'sensor:conf', 'high'
+Took 0.0061 seconds
+hbase:017:0> put 'hotspot', 'g087113#79739075#1815#46688', 'loc:lat', '-2.13067'
+Took 0.0065 seconds
+hbase:018:0> put 'hotspot', 'g087113#79739075#1815#46688', 'loc:lon', '113.78811'
+Took 0.0048 seconds
+hbase:019:0> put 'hotspot', 'g087113#79739075#1815#46688', 'sensor:frp', '4.37'
+Took 0.0055 seconds
+hbase:020:0> put 'hotspot', 'g087113#79739075#1815#46688', 'sensor:conf', 'nominal'
+Took 0.0050 seconds
+hbase:021:0> 
+hbase:001:0> 

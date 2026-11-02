@@ -1,0 +1,19 @@
+hbase:001:0> count 'hotspot'
+5 row(s)
+Took 0.5656 seconds
+=> 5
+hbase:002:0> get 'hotspot', 'g088110#79739076#1834#39858'
+COLUMN  CELL
+0 row(s)
+Took 0.0262 seconds
+hbase:003:0> scan 'hotspot', {STARTROW => 'g087112#', STOPROW => 'g087112$', LIMIT => 20}
+ROW  COLUMN+CELL
+0 row(s)
+Took 0.0069 seconds
+hbase:004:0> scan 'hotspot', {FILTER => "ValueFilter(=, 'binary:high')", LIMIT => 20}
+ROW  COLUMN+CELL
+ g087111#79739080#0527#02562 column=sensor:conf, timestamp=2026-11-01T18:41:28.304, value=high
+1 row(s)
+Took 0.0461 seconds
+hbase:005:0> 
+hbase:001:0> 
